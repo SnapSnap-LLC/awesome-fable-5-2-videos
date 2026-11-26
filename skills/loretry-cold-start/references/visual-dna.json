@@ -1,0 +1,65 @@
+{
+  "title": "A circle draws a sine wave",
+  "summary": "A horizontal guide carries the point’s height from the unit circle to the plot. Sage paper and quiet axes let the growing copper trace lead the eye.",
+  "keywords": [
+    "Sage paper",
+    "Shared baseline",
+    "Horizontal projection",
+    "Continuous trace"
+  ],
+  "rules": [
+    "Composition: Keep the explanation on the left and the diagram on the right. Align the unit circle’s center with the plot’s zero line at y = 196 within the SVG.",
+    "Color and line: Use sage for the paper, dark green for type and the radius, and copper for projected height and the wave. A dashed guide distinguishes the construction from the solid result.",
+    "Motion: Copy the circle point’s height directly across while the angle advances to the right. Keep previous heights as a continuous trace and complete one turn at 14.2 seconds.",
+    "Static view: Use the completed wave as the poster. Keep 0, 2π, and ±1 legible and let the viewer start the animation when ready."
+  ],
+  "palette": [
+    {
+      "color": "#E7EBDF",
+      "label": "Sage paper behind the diagram"
+    },
+    {
+      "color": "#25362B",
+      "label": "Dark green type and radius"
+    },
+    {
+      "color": "#A15D27",
+      "label": "Copper height guide and wave"
+    },
+    {
+      "color": "#AAB7A6",
+      "label": "Quiet guide for the untraced curve"
+    }
+  ],
+  "references": [
+    "R55",
+    "R66"
+  ],
+  "schemaVersion": 1,
+  "skillSlug": "loretry-cold-start",
+  "skillVersion": "1.1.0",
+  "mainImage": {
+    "path": "action.jpg",
+    "time": 7.6,
+    "alt": "A point on the unit circle and the end of a partial sine wave are connected by a horizontal dashed line.",
+    "caption": "7.6 s · The two marks share one height; the dashed line makes the mapping visible before the wave is complete."
+  },
+  "staticImage": {
+    "path": "poster.jpg",
+    "time": 17,
+    "alt": "The unit circle and a complete sine wave share a zero line. The plot marks 0, 2π, +1, and −1.",
+    "caption": "17 s · The complete period and its axis labels remain visible after the rotation stops."
+  },
+  "preview": {
+    "path": "preview.mp4",
+    "duration": 19,
+    "ratio": "16:9",
+    "fps": 30,
+    "width": 1280,
+    "height": 720
+  },
+  "source": {
+    "name": "Loretry Animated Concept Explainer",
+    "url": "https://loretry.dev/"
+  }
+}

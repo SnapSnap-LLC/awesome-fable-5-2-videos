@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=1280,height=720"><title>Give a task a time</title><style>*{box-sizing:border-box}html,body{width:100%;height:100%;overflow:hidden;margin:0}body{font:22px/1.4 -apple-system,BlinkMacSystemFont,Arial,sans-serif}main{position:absolute;inset:0;overflow:hidden}p,h1,h2{margin:0}h1{font-size:80px;line-height:1.08;letter-spacing:-.07em;white-space:pre-line}small{font-size:16px}svg{display:block} [data-beat]{position:absolute;opacity:0;will-change:opacity,translate}
+:root{--paper:#f7f0df;--ink:#082590;--gold:#f5c15c;--line:#cbd0df;--pale:#e9ecfa}
+main{background:var(--paper);color:var(--ink)}
+header{position:absolute;left:64px;right:64px;top:42px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #08259040;padding-bottom:16px;font-size:17px;font-weight:700;letter-spacing:.04em}
+header span:last-child{font-size:15px;letter-spacing:.12em}.text{left:64px;top:204px;width:365px}
+.eyebrow{font-size:14px;font-weight:750;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px}
+.text h1{font-size:68px}.text p:last-child{font-size:21px;margin-top:24px;color:#293c72;max-width:335px}
+.board{position:absolute;top:141px;left:489px;width:720px;height:473px;background:#fffdf7;border:1px solid var(--line);border-radius:16px;box-shadow:0 20px 55px #19194218;overflow:hidden;color:#14204a}
+.toolbar{height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;border-bottom:1px solid var(--line);font-size:18px;font-weight:750}.toolbar small{color:#3b4c76;font-weight:500}.wordmark{display:flex;gap:10px;align-items:center}.wordmark::before{content:'';width:22px;height:22px;background:#082590;border-radius:5px 5px 9px 5px;box-shadow:4px 0 0 #f5c15c}
+.pane{position:absolute;top:66px;bottom:0;padding:22px 20px}.inbox{left:0;width:335px}.plan{left:335px;right:0;border-left:1px solid var(--line);background:#f4f5fa}.pane h2{font-size:17px}.items{position:absolute;left:20px;top:76px;width:295px}.slot{position:absolute;top:76px;left:20px;right:20px;height:76px;background:#e8ecf9;border:1px dashed #a4add0;border-radius:8px;padding:12px 16px;color:#394b7c;font-size:16px}.slot:nth-of-type(2){top:161px}.slot:nth-of-type(3){top:246px}
+.task{height:67px;margin-bottom:13px;padding:12px 15px;background:#fffdf7;border:1px solid #d7dbee;border-radius:8px;line-height:1.2;font-size:20px;font-weight:650}.task small{display:block;margin-top:5px;font-size:13px;font-weight:500;color:#3b4c76}
+#focus{position:absolute;left:20px;top:142px;width:295px;box-shadow:0 6px 16px #25357921;z-index:3;margin:0}
+#ghost{visibility:hidden}.action{position:absolute;left:20px;bottom:19px;background:var(--ink);color:#fff;border-radius:7px;padding:9px 15px;font-size:16px;font-weight:700;z-index:2}.action b{color:var(--gold)}
+#status{position:absolute;right:20px;bottom:19px;color:#152758;font-size:15px;font-weight:700;background:#dfe6ff;border-radius:7px;padding:9px 13px}
+.cursor{position:absolute;left:0;top:0;z-index:5;overflow:visible}.cursor path{fill:var(--ink);stroke:#fff;stroke-width:2}
+.footer{position:absolute;bottom:38px;left:64px;right:64px;display:flex;justify-content:space-between;align-items:center;font-size:15px}.track{height:2px;width:245px;background:#08259030}.track i{display:block;background:#082590;height:2px;width:100%;transform-origin:left}
+</style></head>
+<body><main>
+<header><span>LAUNCHRY</span><span data-copy="format"></span></header>
+<div class="text" data-beat><p class="eyebrow" data-copy="context"></p><h1 data-copy="hook"></h1><p data-copy="problem"></p></div>
+<div class="text" data-beat><p class="eyebrow" data-copy="verb"></p><h1 data-copy="action"></h1><p data-copy="method"></p></div>
+<div class="text" data-beat><p class="eyebrow" data-copy="proofTag"></p><h1 data-copy="result"></h1><p data-copy="proof"></p></div>
+<div class="board">
+  <div class="toolbar"><span class="wordmark" data-copy="product"></span><small data-copy="date"></small></div>
+  <div class="pane inbox"><h2 data-copy="inbox"></h2><div class="items"><div class="task" id="ghost">.</div><div class="task"><span data-copy="itemTwo"></span><small data-copy="tagTwo"></small></div><div class="task"><span data-copy="itemThree"></span><small data-copy="tagThree"></small></div></div><div class="action"><b aria-hidden="true">↳</b> <span data-copy="button"></span></div></div>
+  <div class="pane plan"><h2 data-copy="plan"></h2><div class="slot" data-copy="slotOne"></div><div class="slot" data-copy="slotTwo"></div><div class="slot" data-copy="slotThree"></div></div>
+  <div class="task" id="focus"><span data-copy="itemOne"></span><small data-copy="tagOne"></small></div>
+  <span id="status" data-copy="status"></span>
+  <svg class="cursor" width="32" height="35" viewBox="0 0 32 35" aria-hidden="true"><path d="M3 2l3 28 8-8 6 10 5-3-6-10 11-2z"/></svg>
+</div>
+<footer class="footer"><span data-copy="footer"></span><div class="track" aria-hidden="true"><i></i></div></footer>
+</main><script>const one = s => document.querySelector(s);
+const all = s => [...document.querySelectorAll(s)];
+const clamp = x => Math.min(1, Math.max(0, x));
+const ramp = (t,a,b) => clamp((t-a)/(b-a));
+const ease = x => x*x*(3-2*x);
+const smooth = (t,a,b) => ease(ramp(t,a,b));
+function swap(t, starts){
+  all('[data-beat]').forEach((el,i)=>{
+    const incoming=i===0 ? 1 : smooth(t,starts[i],starts[i]+.38);
+    const outgoing=i===starts.length-1 ? 1 : 1-smooth(t,starts[i+1]-.38,starts[i+1]);
+    el.style.opacity=incoming*outgoing;
+    el.style.translate='0 '+(12*(1-incoming)-7*(1-outgoing))+'px';
+  });
+}
+function bind(copy){for (const el of all('[data-copy]')) el.textContent=copy[el.dataset.copy];}
+
+// Replace this block with the approved copy and labels for your own example.
+const copy={
+  format:'PRODUCT DEMO',context:'01 / THE INBOX',hook:'Give a task\na time.',problem:'The launch script is in the inbox. It still needs a spot in the day.',
+  verb:'02 / THE ACTION',action:'Book\none hour.',method:'Select “Review launch script” and choose Schedule for today.',
+  proofTag:'03 / THE RESULT',result:'Review\nat 9:30.',proof:'The script has a one-hour slot. The other two tasks stay in the inbox.',
+  product:'Dayfold',date:'MONDAY / DAILY PLAN',inbox:'Inbox',plan:'Today',
+  itemOne:'Review launch script',tagOne:'60 min',itemTwo:'Update preview notes',tagTwo:'20 min',
+  itemThree:'Sort user feedback',tagThree:'45 min',button:'Schedule for today',
+  slotOne:'09:30',slotTwo:'11:00',slotThree:'14:00',status:'Scheduled · 09:30–10:30',footer:'Dayfold · Fictional product demo'
+};
+bind(copy);
+const duration=16;
+window.film={duration,frame(t){
+  swap(t,[0,4.2,10.0]);
+  const shift=smooth(t,6.9,8.6);
+  const selected=smooth(t,4.95,5.35)*(1-smooth(t,8.6,9.12));
+  one('#focus').style.translate=(shift*400)+'px '+(shift*7)+'px';
+  one('#focus').style.width=(295-20*shift)+'px';
+  one('#focus').style.borderColor=selected>.45?'#082590':shift>.94?'#9da9db':'#d7dbee';
+  one('#focus').style.background=t>=8.6?'#e1e8ff':selected>.45 || shift>0?'#f5c15c':'#fffdf7';
+  one('#status').style.opacity=smooth(t,8.6,9.03);
+  one('.action').style.opacity=smooth(t,4.2,4.6)*(1-smooth(t,8.5,8.95));
+  const aim=smooth(t,4.65,5.2);
+  const toButton=smooth(t,5.6,6.55);
+  one('.cursor').style.translate=(290-96*aim-108*toButton)+'px '+(244-70*aim+251*toButton)+'px';
+  one('.cursor').style.scale=(1-.15*Math.sin(Math.PI*ramp(t,5.18,5.48))-.15*Math.sin(Math.PI*ramp(t,6.64,6.9)));
+  one('.cursor').style.opacity=smooth(t,4.55,4.85)*(1-smooth(t,6.88,7.25));
+  one('.track i').style.scale=ramp(t,0,duration)+' 1';
+}};
+
+window.film.frame(0);
+</script></body></html>

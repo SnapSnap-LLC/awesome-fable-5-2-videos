@@ -1,4 +1,108 @@
 {
   "targetModel": "Claude Fable 5.2",
-  "videos": []
+  "videos": [],
+  "catalogSkills": [
+    {
+      "id": "launchry-l05-mascot-led-phone-launch",
+      "title": "Mascot-led Phone Launch",
+      "provider": "Launchry",
+      "access": "paid",
+      "description": "Let an original character carry one useful action into a phone.",
+      "engine": "OpenFilm",
+      "durationSeconds": 33.2,
+      "pageUrl": "https://launchry.dev/skills/launchry-l05-mascot-led-phone-launch?lang=en&utm_source=github&utm_medium=readme&utm_campaign=awesome-fable-5-2-videos&utm_content=paid_skill",
+      "videoUrl": "https://skillharbor-replica-media.xdylanlong.workers.dev/launchry/launchry-l05-mascot-led-phone-launch/1.2.0/f2af25faedbfbb5577a3c1d3ae62267225254da832248727728ac3623742bbf1/preview.mp4",
+      "previewPath": "assets/readme/launchry-l05-mascot-led-phone-launch.webp"
+    },
+    {
+      "id": "launchry-cut-paper-product-story",
+      "title": "Cut Paper Product Story",
+      "provider": "Launchry",
+      "access": "paid",
+      "description": "Open a seed packet and follow it to a blooming windowsill.",
+      "engine": "OpenFilm",
+      "durationSeconds": 29.6,
+      "pageUrl": "https://launchry.dev/skills/launchry-cut-paper-product-story?lang=en&utm_source=github&utm_medium=readme&utm_campaign=awesome-fable-5-2-videos&utm_content=paid_skill",
+      "videoUrl": "https://skillharbor-replica-media.xdylanlong.workers.dev/launchry/launchry-cut-paper-product-story/1.2.0/5b9cf81864b66eab47772933aa8e911a36b4e31d4c097b7cfac6d2d6412bf737/preview.mp4",
+      "previewPath": "assets/readme/launchry-cut-paper-product-story.webp"
+    },
+    {
+      "id": "launchry-l20-steam-led-product-film",
+      "title": "Steam-led Product Film",
+      "provider": "Launchry",
+      "access": "paid",
+      "description": "Follow rising vapor into a physical product launch.",
+      "engine": "OpenFilm",
+      "durationSeconds": 35.4,
+      "pageUrl": "https://launchry.dev/skills/launchry-l20-steam-led-product-film?lang=en&utm_source=github&utm_medium=readme&utm_campaign=awesome-fable-5-2-videos&utm_content=paid_skill",
+      "videoUrl": "https://skillharbor-replica-media.xdylanlong.workers.dev/launchry/launchry-l20-steam-led-product-film/1.2.0/4909112d06ac27246731d4be6dcbb033412f9660b2a1e710979da4e40b28d234/preview.mp4",
+      "previewPath": "assets/readme/launchry-l20-steam-led-product-film.webp"
+    },
+    {
+      "id": "loretry-r68-how-bees-give-directions",
+      "title": "How Bees Give Directions",
+      "provider": "Loretry",
+      "access": "paid",
+      "description": "Follow the same bearing from a waggle on the comb to a flight toward flowers.",
+      "engine": "OpenFilm",
+      "durationSeconds": 34.2,
+      "pageUrl": "https://loretry.dev/skills/loretry-r68-how-bees-give-directions?lang=en&utm_source=github&utm_medium=readme&utm_campaign=awesome-fable-5-2-videos&utm_content=paid_skill",
+      "videoUrl": "https://skillharbor-replica-media.xdylanlong.workers.dev/loretry/loretry-r68-how-bees-give-directions/1.2.0/664f8b694b659a5df13b26d50c9088396f916c0e548f8a3de93ab578dc1f97f5/preview.mp4",
+      "previewPath": "assets/readme/loretry-r68-how-bees-give-directions.webp"
+    },
+    {
+      "id": "loretry-vibe-coastal-map-story",
+      "title": "Coastal Map Story",
+      "provider": "Loretry",
+      "access": "paid",
+      "description": "Follow one fog bank from cold water to the low ground inland.",
+      "engine": "OpenFilm",
+      "durationSeconds": 39,
+      "pageUrl": "https://loretry.dev/skills/loretry-vibe-coastal-map-story?lang=en&utm_source=github&utm_medium=readme&utm_campaign=awesome-fable-5-2-videos&utm_content=paid_skill",
+      "videoUrl": "https://skillharbor-replica-media.xdylanlong.workers.dev/loretry/loretry-vibe-coastal-map-story/1.2.0/a7ed7a472fa99292ca894a865bc4afab81f741998f16ea6ee123dfdb90261ce5/preview.mp4",
+      "previewPath": "assets/readme/loretry-vibe-coastal-map-story.webp"
+    },
+    {
+      "id": "loretry-vibe-cutout-object-motion",
+      "title": "Cutout Object Motion",
+      "provider": "Loretry",
+      "access": "paid",
+      "description": "Follow a paper cutout through a landscape with real depth.",
+      "engine": "OpenFilm",
+      "durationSeconds": 35.4,
+      "pageUrl": "https://loretry.dev/skills/loretry-vibe-cutout-object-motion?lang=en&utm_source=github&utm_medium=readme&utm_campaign=awesome-fable-5-2-videos&utm_content=paid_skill",
+      "videoUrl": "https://skillharbor-replica-media.xdylanlong.workers.dev/loretry/loretry-vibe-cutout-object-motion/1.2.0/c2f6e6fea71e06f8ea20dcdc8ae28d789267421ac49a2928ecb37f8b9c16e44c/preview.mp4",
+      "previewPath": "assets/readme/loretry-vibe-cutout-object-motion.webp"
+    },
+    {
+      "id": "launchry-cold-start",
+      "title": "Product Demo Film",
+      "provider": "Launchry",
+      "access": "free",
+      "description": "Show one product action and carry the same task into a confirmed result.",
+      "engine": "OpenFilm",
+      "durationSeconds": 39.4,
+      "pageUrl": "https://launchry.dev/skills/launchry-cold-start?lang=en&utm_source=github&utm_medium=readme&utm_campaign=awesome-fable-5-2-videos&utm_content=free_skill",
+      "videoUrl": "https://skillharbor-replica-media.xdylanlong.workers.dev/launchry/launchry-cold-start/1.3.0/b3b2b4c2ae2707ecefc3b442b272bbb688c79105a438abc5d58e19ecc2bc0531/preview.mp4",
+      "previewPath": "assets/readme/launchry-cold-start.webp",
+      "packageVersion": "1.1.0",
+      "packagePath": "skills/launchry-cold-start-1.1.0.zip",
+      "skillPath": "skills/launchry-cold-start/SKILL.md"
+    },
+    {
+      "id": "loretry-cold-start",
+      "title": "Animated Concept Explainer",
+      "provider": "Loretry",
+      "access": "free",
+      "description": "Follow a hidden relationship through a physical motion.",
+      "engine": "OpenFilm",
+      "durationSeconds": 34.4,
+      "pageUrl": "https://loretry.dev/skills/loretry-cold-start?lang=en&utm_source=github&utm_medium=readme&utm_campaign=awesome-fable-5-2-videos&utm_content=free_skill",
+      "videoUrl": "https://skillharbor-replica-media.xdylanlong.workers.dev/loretry/loretry-cold-start/1.3.0/9ae84f2997415d541073ea29d16be88fe4d66aa4ce40fde0a2e9b651563bd3ce/preview.mp4",
+      "previewPath": "assets/readme/loretry-cold-start.webp",
+      "packageVersion": "1.1.0",
+      "packagePath": "skills/loretry-cold-start-1.1.0.zip",
+      "skillPath": "skills/loretry-cold-start/SKILL.md"
+    }
+  ]
 }
